@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hashtable.visual.HelloController">
+   <children>
+      <HBox prefHeight="437.0" prefWidth="900.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="445.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="475.0" style="-fx-font-size: 15;" text="Address hash table" />
+                  <TableView fx:id="addressHashTable" prefHeight="380.0" prefWidth="445.0">
+                     <columns>
+                        <TableColumn fx:id="addressIndexColumn" prefWidth="75.0" text="Index" />
+                        <TableColumn fx:id="addressKeyColumn" prefWidth="120.0" text="Key" />
+                        <TableColumn fx:id="addressValueColumn" prefWidth="257.0" text="Value" />
+                     </columns>
+                  </TableView>
+               </children>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="445.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="475.0" style="-fx-font-size: 15;" text="Linked hash table" />
+                  <TableView fx:id="linkedHashTable" prefHeight="380.0" prefWidth="445.0">
+                    <columns>
+                        <TableColumn fx:id="linkedIndexColumn" prefWidth="75.0" text="Index" />
+                      <TableColumn fx:id="linkedKeyColumn" minWidth="0.0" prefWidth="0.0" text="Key" />
+                      <TableColumn fx:id="linkedValueColumn" prefWidth="445.0" text="Value" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="79.0" prefWidth="900.0">
+         <children>
+            <VBox prefHeight="79.0" prefWidth="214.0">
+               <children>
+                  <HBox prefHeight="42.0" prefWidth="947.0">
+                     <children>
+                        <Label text="Key" />
+                        <TextField fx:id="keyField" alignment="CENTER_RIGHT" prefHeight="7.0" prefWidth="149.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="28.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Value" />
+                        <TextField fx:id="valueField" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="157.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#put" prefHeight="25.0" prefWidth="53.0" text="put" />
+                  <Button mnemonicParsing="false" onAction="#delete" text="delete" />
+                  <Button mnemonicParsing="false" onAction="#clear" text="clear" />
+               </children>
+            </VBox>
+            <ComboBox fx:id="tableTypeBox" prefWidth="150.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
